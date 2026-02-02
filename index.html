@@ -22,14 +22,14 @@
 		/>
 	</head>
 	<body>
-		<header class="header">
+		<header class="header container">
 			<a
 				href="/"
-				class="logo"
+				class="header__logo"
 			>
 				LetsFly
 			</a>
-			<nav class="menu">
+			<nav class="header__menu">
 				<ul>
 					<li><a href="#">Intro</a></li>
 					<li><a href="#">About</a></li>
@@ -39,5 +39,30 @@
 				</ul>
 			</nav>
 		</header>
+
+		<main class="welcome container">
+			<div class="welcome__information">
+				<div class="welcome__sub-text">Personal jets</div>
+				<h1 class="welcome__title">
+					Luxury.
+					<br />
+					Affordable.
+				</h1>
+				<div class="welcome__description">
+					We believe loyalty should be rewarded.
+				</div>
+
+				<div class="welcome__cta">
+					<button class="btn">Learn more</button>
+					<button class="btn btn--primary">Let's Fly</button>
+				</div>
+			</div>
+
+			<img
+				class="welcome__plane"
+				src="/assets/images/plane/06.png"
+				draggable="false"
+			/>
+		</main>
 	</body>
 </html>

@@ -1,0 +1,30 @@
+@import "variables";
+
+html {
+	font-size: 18px;
+}
+
+body {
+	background-color: $color-bg;
+	color: $color-text;
+
+	font-family: $font-family;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	letter-spacing: 0.03em;
+}
+
+button {
+	cursor: pointer;
+}
+
+.container {
+	max-width: 1650px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+@import "ui";
+@import "header";
+@import "welcome";
