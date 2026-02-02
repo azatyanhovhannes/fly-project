@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  width="300"
+  height="200"
+  viewBox="0 0 300 200"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- fuselage -->
+  <path
+    d="M20 110
+       C40 95, 80 90, 140 90
+       L220 90
+       C250 90, 270 100, 280 100
+       C270 100, 250 110, 220 110
+       L140 110
+       C80 110, 40 115, 20 110 Z"
+    fill="#d0d7de"
+    stroke="#9aa4ad"
+    stroke-width="2"
+  />
+
+  <!-- cockpit -->
+  <path
+    d="M200 92
+       C215 92, 235 96, 245 100
+       C235 104, 215 108, 200 108 Z"
+    fill="#9ecae1"
+  />
+
+  <!-- top wing -->
+  <path
+    d="M110 90
+       L60 40
+       L75 40
+       L150 90 Z"
+    fill="#b0b8bf"
+    stroke="#8a939b"
+    stroke-width="1.5"
+  />
+
+  <!-- bottom wing -->
+  <path
+    d="M110 110
+       L150 110
+       L75 160
+       L60 160 Z"
+    fill="#b0b8bf"
+    stroke="#8a939b"
+    stroke-width="1.5"
+  />
+
+  <!-- vertical tail -->
+  <path
+    d="M40 90
+       L55 55
+       L70 55
+       L60 90 Z"
+    fill="#c0c7cd"
+    stroke="#8a939b"
+    stroke-width="1.5"
+  />
+
+  <!-- horizontal tail -->
+  <path
+    d="M45 100
+       L10 80
+       L10 85
+       L45 105 Z"
+    fill="#b0b8bf"
+  />
+
+  <!-- engine -->
+  <ellipse cx="135" cy="118" rx="12" ry="6" fill="#8a939b" />
+</svg>
