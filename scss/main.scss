@@ -15,6 +15,8 @@ body {
 	letter-spacing: 0.03em;
 
 	overflow-x: hidden;
+	max-width: 2560px;
+	margin: 0 auto;
 }
 
 button {
@@ -37,3 +39,5 @@ button {
 @import "welcome";
 @import "mission";
 @import "section_ui";
+@import "loyalty";
+@import "costs";
