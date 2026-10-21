@@ -2,6 +2,10 @@
 
 html {
 	font-size: 18px;
+
+	@media (max-width: 1920px) {
+		font-size: 16px;
+	}
 }
 
 body {
@@ -41,3 +45,5 @@ button {
 @import "section_ui";
 @import "loyalty";
 @import "costs";
+@import "apply";
+@import "faq";
