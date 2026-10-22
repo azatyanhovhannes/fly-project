@@ -8,6 +8,19 @@
 		/>
 		<title>Private Jet</title>
 		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+			rel="stylesheet"
+		/>
+		<link
 			rel="stylesheet"
 			href="./dist/css/preflight.min.css"
 		/>
@@ -22,325 +35,337 @@
 		/>
 	</head>
 	<body>
-		<header class="header container">
-			<a
-				href="/"
-				class="header__logo non-select-image"
-			>
-				LetsFly
-			</a>
-			<nav class="header__menu">
-				<ul>
-					<li><a href="#">Intro</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Costs</a></li>
-					<li><a href="#">Features</a></li>
-					<li><a href="#">FAQ</a></li>
-				</ul>
-			</nav>
-		</header>
-
-		<main class="welcome">
-			<div class="welcome__information">
-				<div class="sub-title">Personal jets</div>
-				<h1 class="welcome__title">
-					Luxury.
-					<br />
-					Affordable.
-				</h1>
-				<div class="description">We believe loyalty should be rewarded.</div>
-
-				<div class="welcome__cta">
-					<button class="btn btn--gray">Learn more</button>
-					<button class="btn btn--primary">Let's Fly</button>
-				</div>
-			</div>
-
-			<img
-				class="welcome__plane non-select-image"
-				src="/assets/images/plane/06.png"
-				draggable="false"
-			/>
-
-			<div class="welcome__bg-clouds">
-				<img
-					src="./assets/images/clouds/left-cloud.png"
-					draggable="false"
-					class="non-select-image"
-				/>
-				<img
-					src="./assets/images/clouds/main-cloud.png"
-					draggable="false"
-					class="non-select-image"
-				/>
-				<img
-					src="./assets/images/clouds/right-cloud.png"
-					draggable="false"
-					class="non-select-image"
-				/>
-			</div>
-		</main>
-
-		<div class="mission">
-			<div>One simple fly rate.</div>
-			<div>A discount that gets better and better.</div>
-			<div>Apply in minutes.</div>
-			<div>Built for rich people.</div>
-		</div>
-
-		<section>
-			<div class="container">
-				<div class="sub-title">Experience our</div>
-				<h2 class="section-title">
-					<div>Luxury</div>
-					Flights.
-				</h2>
-				<div class="description section__description">
-					Experience unmatched luxury in the skies. Our private jets offer
-					top-tier comfort, personalized service, and exquisite amenities for
-					every journey.
-				</div>
-				<button class="btn btn-gray">Book now</button>
-			</div>
-			<img
-				class="luxury-flights__image non-select-image"
-				src="./assets/images/plane/05.png"
-				draggable="false"
-			/>
-		</section>
-
-		<section class="loyalty">
-			<div class="container">
-				<div class="loyalty__top">
-					<div class="sub-title">SEAMLESSLY</div>
-					<h2 class="section-title">
-						<div>Instantly</div>
-						Booked.
-					</h2>
-				</div>
-				<img
-					class="loyalty__image non-select-image"
-					src="./assets/images/plane/loalty-plane.png "
-					draggable="false"
-				/>
-				<div class="loyalty__bottom">
-					<h3 class="section__bottom-title">Every. Single. Year.</h3>
-					<div
-						class="section__bottom-description description section__description"
+		<div id="smooth-wrapper">
+			<div id="smooth-content">
+				<header class="header container fade-in">
+					<a
+						href="/"
+						class="header__logo non-select-image"
 					>
-						Enjoy new, exclusive perks and benefits every single year with our
-						luxury flight services.
-						<br />
-						<br />
-						We believe loyalty should be rewarded.
-						<button class="btn">Get Started</button>
-					</div>
-				</div>
-			</div>
-		</section>
+						LetsFly
+					</a>
+					<nav class="header__menu">
+						<ul>
+							<li><a href="#">Intro</a></li>
+							<li><a href="#">About</a></li>
+							<li><a href="#">Costs</a></li>
+							<li><a href="#">Features</a></li>
+							<li><a href="#">FAQ</a></li>
+						</ul>
+					</nav>
+				</header>
 
-		<section class="costs">
-			<div class="container">
-				<div class="costs__sub-heading">Insanly Low</div>
-				<h2 class="costs__heading">Costs.</h2>
-				<img
-					class="costs__image non-select-image"
-					src="./assets/images/plane/03.png "
-					draggable="false"
-				/>
-				<div class="costs__bottom">
-					<div class="costs__bottom-left">
-						<h3 class="section__bottom-title">Personal Discounts</h3>
-						<div
-							class="costs__bottom-description section__bottom-description description section__description"
-						>
-							Unlock tailored saving just for you. Exclusive personal discounts
-							on your luxury private jet services.
+				<main class="welcome">
+					<div
+						class="welcome__information zoom-in-fade-in will-change-transform"
+					>
+						<div class="sub-title">Personal jets</div>
+						<h1 class="welcome__title fade-in">
+							Luxury.
+							<br />
+							Affordable.
+						</h1>
+						<div class="description">
+							We believe loyalty should be rewarded.
 						</div>
-						<div class="costs__bottom-buttons">
+
+						<div class="welcome__cta">
 							<button class="btn btn--gray">Learn more</button>
-							<button class="btn">Get Started</button>
+							<button class="btn btn--primary">Let's Fly</button>
 						</div>
 					</div>
-					<div class="costs__bottom-right">
-						<div>
-							<div>5.25</div>
-							<div>
-								<span>%</span>
-								<span>PA</span>
-							</div>
-						</div>
-						<div>Estimated Rate*</div>
-					</div>
-				</div>
-			</div>
-		</section>
 
-		<section class="apply">
-			<div class="apply__grid">
-				<div class="apply__empty-wrapper">
-					<div class="apply__empty"></div>
-					<div class="apply__empty"></div>
-				</div>
-				<div class="apply__main">
-					<div class="apply__card apply__card--top">
-						<span class="apply__title">Apply in minutes.</span>
-						<button class="btn btn--gray">Learn more</button>
+					<img
+						class="welcome__plane non-select-image"
+						src="/assets/images/plane/06.png"
+						draggable="false"
+					/>
+
+					<div class="welcome__bg-clouds">
 						<img
-							class="apply__first-plane non-select-image"
-							src="./assets/images/plane/apply.png "
+							src="./assets/images/clouds/left-cloud.png"
 							draggable="false"
+							class="non-select-image fade-in"
+						/>
+						<img
+							src="./assets/images/clouds/main-cloud.png"
+							draggable="false"
+							class="non-select-image"
+						/>
+						<img
+							src="./assets/images/clouds/right-cloud.png"
+							draggable="false"
+							class="non-select-image right-fade-in"
 						/>
 					</div>
+				</main>
 
-					<div class="apply__row">
-						<div class="apply__card apply__card--left">
-							<img
-								class="apply__second-plane non-select-image"
-								src="./assets/images/plane/apply-2.png "
-								draggable="false"
-							/>
-							<div class="apply__title apply__title--light">
-								Backed by American's leading airlines.
-							</div>
-							<button class="btn btn--premium">Learn more</button>
+				<div class="mission">
+					<div>One simple fly rate.</div>
+					<div>A discount that gets better and better.</div>
+					<div>Apply in minutes.</div>
+					<div>Built for rich people.</div>
+				</div>
+
+				<section id="luxury">
+					<div class="container">
+						<div class="sub-title">Experience our</div>
+						<h2 class="section-title">
+							<div>Luxury</div>
+							Flights.
+						</h2>
+						<div class="description section__description">
+							Experience unmatched luxury in the skies. Our private jets offer
+							top-tier comfort, personalized service, and exquisite amenities
+							for every journey.
 						</div>
+						<button class="btn btn-gray">Book now</button>
+					</div>
+					<img
+						class="luxury-flights__image non-select-image"
+						src="./assets/images/plane/05.png"
+						draggable="false"
+					/>
+				</section>
 
-						<div class="apply__card apply__card--right">
-							<div class="apply__chat">
-								<div class="apply__message apply__message--user">
-									Nice. How can I switch to let'sFly?
-								</div>
-								<div class="apply__message apply__message--system">
-									Tap the 'Refinance Now' button to get started. If you have any
-									questions, I'm here to help.
-								</div>
-								<div class="apply__message apply__message--user">
-									👍All done!
-								</div>
-							</div>
-							<div class="apply__support">
-								<div class="apply__title">
-									Got a question?
-									<br />
-									We're here to help.
-								</div>
-								<button class="btn btn--gray">Chat with us</button>
+				<section class="loyalty">
+					<div class="container">
+						<div class="loyalty__top">
+							<div class="sub-title">SEAMLESSLY</div>
+							<h2 class="section-title">
+								<div>Instantly</div>
+								Booked.
+							</h2>
+						</div>
+						<img
+							class="loyalty__image non-select-image"
+							src="./assets/images/plane/loalty-plane.png "
+							draggable="false"
+						/>
+						<div class="loyalty__bottom">
+							<h3 class="section__bottom-title">Every. Single. Year.</h3>
+							<div
+								class="section__bottom-description description section__description"
+							>
+								Enjoy new, exclusive perks and benefits every single year with
+								our luxury flight services.
+								<br />
+								<br />
+								We believe loyalty should be rewarded.
+								<button class="btn">Get Started</button>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="apply__empty-wrapper">
-					<div class="apply__empty"></div>
-					<div class="apply__empty"></div>
-				</div>
+				</section>
+
+				<section class="costs">
+					<div class="container">
+						<div class="costs__sub-heading">Insanly Low</div>
+						<h2 class="costs__heading">Costs.</h2>
+						<img
+							class="costs__image non-select-image"
+							src="./assets/images/plane/03.png "
+							draggable="false"
+						/>
+						<div class="costs__bottom">
+							<div class="costs__bottom-left">
+								<h3 class="section__bottom-title">Personal Discounts</h3>
+								<div
+									class="costs__bottom-description section__bottom-description description section__description"
+								>
+									Unlock tailored saving just for you. Exclusive personal
+									discounts on your luxury private jet services.
+								</div>
+								<div class="costs__bottom-buttons">
+									<button class="btn btn--gray">Learn more</button>
+									<button class="btn">Get Started</button>
+								</div>
+							</div>
+							<div class="costs__bottom-right">
+								<div>
+									<div>5.25</div>
+									<div>
+										<span>%</span>
+										<span>PA</span>
+									</div>
+								</div>
+								<div>Estimated Rate*</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="apply">
+					<div class="apply__grid">
+						<div class="apply__empty-wrapper">
+							<div class="apply__empty"></div>
+							<div class="apply__empty"></div>
+						</div>
+						<div class="apply__main">
+							<div class="apply__card apply__card--top">
+								<span class="apply__title">Apply in minutes.</span>
+								<button class="btn btn--gray">Learn more</button>
+								<img
+									class="apply__first-plane non-select-image"
+									src="./assets/images/plane/apply.png "
+									draggable="false"
+								/>
+							</div>
+
+							<div class="apply__row">
+								<div class="apply__card apply__card--left">
+									<img
+										class="apply__second-plane non-select-image"
+										src="./assets/images/plane/apply-2.png "
+										draggable="false"
+									/>
+									<div class="apply__title apply__title--light">
+										Backed by American's leading airlines.
+									</div>
+									<button class="btn btn--premium">Learn more</button>
+								</div>
+
+								<div class="apply__card apply__card--right">
+									<div class="apply__chat">
+										<div class="apply__message apply__message--user">
+											Nice. How can I switch to let'sFly?
+										</div>
+										<div class="apply__message apply__message--system">
+											Tap the 'Refinance Now' button to get started. If you have
+											any questions, I'm here to help.
+										</div>
+										<div class="apply__message apply__message--user">
+											👍All done!
+										</div>
+									</div>
+									<div class="apply__support">
+										<div class="apply__title">
+											Got a question?
+											<br />
+											We're here to help.
+										</div>
+										<button class="btn btn--gray">Chat with us</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="apply__empty-wrapper">
+							<div class="apply__empty"></div>
+							<div class="apply__empty"></div>
+						</div>
+					</div>
+				</section>
+
+				<section class="faq">
+					<div class="container faq__container">
+						<h2 class="faq__title">
+							In case you
+							<br />
+							missed anything.
+						</h2>
+						<div>
+							<div class="faq__item">
+								<button class="faq__question">Are there really no fees?</button>
+								<div class="faq__answer">
+									Let’s Fly (the Sletat.ru tour operator) generally doesn’t
+									charge customers a commission for selecting and booking a
+									tour. However, keep in mind that some costs may be included in
+									the final price via partner markups (e.g., from hotels or
+									airlines), or you may be offered optional paid extras (like
+									insurance or transfers) that you’re free to decline. Always
+									check the booking details carefully.
+								</div>
+							</div>
+							<div class="faq__item">
+								<button class="faq__question">
+									How does Let's Fly annual discount bump work?
+								</button>
+								<div class="faq__answer">
+									Let’s Fly doesn’t offer a standard annual discount for all
+									customers. Instead, benefits usually come through seasonal
+									promotions, promo codes for new clients, or special
+									early‑booking deals. You might also get personalized offers or
+									loyalty bonuses in your personal account, so it’s worth
+									checking it regularly.
+								</div>
+							</div>
+							<div class="faq__item">
+								<button class="faq__question">
+									Am I eligible for Let's Fly?
+								</button>
+								<div class="faq__answer">
+									Anyone can use Let’s Fly to book a trip—there are no
+									eligibility restrictions based on age, income, or other
+									criteria. The main consideration is whether the tour options
+									and service format suit your needs.
+								</div>
+							</div>
+							<div class="faq__item">
+								<button class="faq__question">
+									What does the application process look like?
+								</button>
+								<div class="faq__answer">
+									The process typically goes like this: you submit a request on
+									the website (specifying travel dates, destination, budget, and
+									group size) or contact a manager by phone. A specialist will
+									gather more details, propose suitable options, and send you
+									the offers. Once you pick a tour, you pay a deposit (often
+									50%, with the balance due closer to the trip date), and then
+									the necessary documents are prepared.
+								</div>
+							</div>
+							<div class="faq__item">
+								<button class="faq__question">
+									What is Let's Fly relationship to CommBank?
+								</button>
+								<div class="faq__answer">
+									There is no direct financial or partnership link between Let’s
+									Fly and CommBank. Let’s Fly is a tour operator, and CommBank
+									is an Australian bank. Any confusion may come from people
+									managing different payments together, but the services aren’t
+									integrated.
+								</div>
+							</div>
+							<div class="faq__item">
+								<button class="faq__question">
+									Can I offset interest in my Let's Fly account?
+								</button>
+								<div class="faq__answer">
+									Let’s Fly doesn’t operate a bank‑style account where interest
+									is accrued or can be offset. The service focuses on organizing
+									trips, not offering credit or deposit accounts, so interest
+									offsetting isn’t applicable.
+								</div>
+							</div>
+							<div class="faq__item">
+								<button class="faq__question">
+									How does Let's Fly make sure my data and personal information
+									is safe?
+								</button>
+								<div class="faq__answer">
+									The company follows data protection standards: it uses
+									encryption for data transmission, restricts database access to
+									authorized staff only, and maintains a privacy policy. It’s a
+									good idea to review the privacy policy on their website to see
+									exactly what data they collect and how they store it.
+								</div>
+							</div>
+							<div class="faq__item">
+								<button class="faq__question">
+									What if I need to get in touch with someone?
+								</button>
+								<div class="faq__answer">
+									You can contact Let’s Fly support via the chat on their
+									website, by phone (using the number listed), or by email (from
+									the “Contacts” section). Their team can help with booking
+									questions, tour details, or document issues.
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 			</div>
-		</section>
-
-		<section class="faq">
-			<div class="container faq__container">
-				<h2 class="faq__title">
-					In case you
-					<br />
-					missed anything.
-				</h2>
-				<div>
-					<div class="faq__item">
-						<button class="faq__question">Are there really no fees?</button>
-						<div class="faq__answer">
-							Let’s Fly (the Sletat.ru tour operator) generally doesn’t charge
-							customers a commission for selecting and booking a tour. However,
-							keep in mind that some costs may be included in the final price
-							via partner markups (e.g., from hotels or airlines), or you may be
-							offered optional paid extras (like insurance or transfers) that
-							you’re free to decline. Always check the booking details
-							carefully.
-						</div>
-					</div>
-					<div class="faq__item">
-						<button class="faq__question">
-							How does Let's Fly annual discount bump work?
-						</button>
-						<div class="faq__answer">
-							Let’s Fly doesn’t offer a standard annual discount for all
-							customers. Instead, benefits usually come through seasonal
-							promotions, promo codes for new clients, or special early‑booking
-							deals. You might also get personalized offers or loyalty bonuses
-							in your personal account, so it’s worth checking it regularly.
-						</div>
-					</div>
-					<div class="faq__item">
-						<button class="faq__question">Am I eligible for Let's Fly?</button>
-						<div class="faq__answer">
-							Anyone can use Let’s Fly to book a trip—there are no eligibility
-							restrictions based on age, income, or other criteria. The main
-							consideration is whether the tour options and service format suit
-							your needs.
-						</div>
-					</div>
-					<div class="faq__item">
-						<button class="faq__question">
-							What does the application process look like?
-						</button>
-						<div class="faq__answer">
-							The process typically goes like this: you submit a request on the
-							website (specifying travel dates, destination, budget, and group
-							size) or contact a manager by phone. A specialist will gather more
-							details, propose suitable options, and send you the offers. Once
-							you pick a tour, you pay a deposit (often 50%, with the balance
-							due closer to the trip date), and then the necessary documents are
-							prepared.
-						</div>
-					</div>
-					<div class="faq__item">
-						<button class="faq__question">
-							What is Let's Fly relationship to CommBank?
-						</button>
-						<div class="faq__answer">
-							There is no direct financial or partnership link between Let’s Fly
-							and CommBank. Let’s Fly is a tour operator, and CommBank is an
-							Australian bank. Any confusion may come from people managing
-							different payments together, but the services aren’t integrated.
-						</div>
-					</div>
-					<div class="faq__item">
-						<button class="faq__question">
-							Can I offset interest in my Let's Fly account?
-						</button>
-						<div class="faq__answer">
-							Let’s Fly doesn’t operate a bank‑style account where interest is
-							accrued or can be offset. The service focuses on organizing trips,
-							not offering credit or deposit accounts, so interest offsetting
-							isn’t applicable.
-						</div>
-					</div>
-					<div class="faq__item">
-						<button class="faq__question">
-							How does Let's Fly make sure my data and personal information is
-							safe?
-						</button>
-						<div class="faq__answer">
-							The company follows data protection standards: it uses encryption
-							for data transmission, restricts database access to authorized
-							staff only, and maintains a privacy policy. It’s a good idea to
-							review the privacy policy on their website to see exactly what
-							data they collect and how they store it.
-						</div>
-					</div>
-					<div class="faq__item">
-						<button class="faq__question">
-							What if I need to get in touch with someone?
-						</button>
-						<div class="faq__answer">
-							You can contact Let’s Fly support via the chat on their website,
-							by phone (using the number listed), or by email (from the
-							“Contacts” section). Their team can help with booking questions,
-							tour details, or document issues.
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+		</div>
 
 		<script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
 

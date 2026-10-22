@@ -17,6 +17,10 @@ body {
 	font-weight: 400;
 	font-style: normal;
 	letter-spacing: 0.03em;
+	line-height: 1.5;
+	text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialised;
 
 	overflow-x: hidden;
 	max-width: 2560px;
@@ -25,6 +29,10 @@ body {
 
 button {
 	cursor: pointer;
+}
+
+img {
+	display: block;
 }
 
 .container {
@@ -36,6 +44,20 @@ button {
 .non-select-image {
 	pointer-events: none;
 	user-select: none;
+	will-change: transform;
+	backface-visibility: hidden;
+	transform: translateZ(0);
+}
+
+.will-change-transform,
+.fade-in,
+.zoom-in-fade-in,
+.right-fade-in {
+	will-change: transform;
+}
+
+#smooth-content {
+	will-change: transform;
 }
 
 @import "ui";
