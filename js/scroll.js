@@ -2,25 +2,21 @@ document.addEventListener("DOMContentLoaded", event => {
 	gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 
 	ScrollSmoother.create({
-		smooth: 1,
-		effects: false,
-		smoothTouch: 0.1
+		smooth: 1, // how long (in seconds) it takes to "catch up" to the native scroll position
+		effects: false, // looks for data-speed and data-lag attributes on elements
+		smoothTouch: 0.1 // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
 	})
 
 	const fadeIn = ".fade-in"
 	const rightFadeIn = ".right-fade-in"
 	const zoomInFadeIn = ".zoom-in-fade-in"
 
-	gsap.set([fadeIn, zoomInFadeIn, rightFadeIn], {
-		force3D: true,
-		transformPerspective: 1000,
-		backfaceVisibility: "hidden"
-	})
+	/* Global */
 
 	gsap.from(fadeIn, {
 		y: -25,
 		opacity: 0,
-		duration: 0.6,
+		duration: 1,
 		stagger: 0.1,
 		ease: "power2.ease"
 	})
@@ -33,10 +29,9 @@ document.addEventListener("DOMContentLoaded", event => {
 		ease: "power2.ease"
 	})
 
-	// welcome section
-
+	/* Welcome section */
 	const welcome = ".welcome"
-	const welcomePlane = ".welcome__plane"
+	const welcome__plane = ".welcome__plane"
 
 	gsap.from(zoomInFadeIn, {
 		scale: 0.8,
@@ -47,7 +42,7 @@ document.addEventListener("DOMContentLoaded", event => {
 		immediateRender: false
 	})
 
-	gsap.from(welcomePlane, {
+	gsap.from(welcome__plane, {
 		x: -140,
 		y: 50,
 		duration: 1.5,
@@ -69,18 +64,21 @@ document.addEventListener("DOMContentLoaded", event => {
 			zoomInFadeIn,
 			{
 				scale: 0.8,
-				opacity: 0.3,
+				opacity: 0,
 				ease: "none"
 			},
 			0
 		)
-		.to(welcomePlane, {
-			x: 140,
-			y: -50
-		})
+		.to(
+			welcome__plane,
+			{
+				x: 140,
+				y: -50
+			},
+			0
+		)
 
-	// mission section
-
+	/* Mission section */
 	const mission = ".mission"
 
 	gsap.utils.toArray(`${mission} > div`).forEach((item, index) => {
@@ -94,7 +92,7 @@ document.addEventListener("DOMContentLoaded", event => {
 				ease: "power2.out",
 				scrollTrigger: {
 					trigger: item,
-					start: "top 90%",
+					start: "top 95%",
 					end: "top 45%",
 					scrub: true
 				}
@@ -102,16 +100,16 @@ document.addEventListener("DOMContentLoaded", event => {
 		)
 	})
 
-	// luxury
+	/* Luxury */
 	const luxury = "#luxury"
 	const luxuryPlane = ".luxury-flights__image"
 
 	gsap.from(`${luxury} > .container`, {
 		scale: 0.9,
 		opacity: 0,
-		x: 150,
-		duration: 1.5,
-		ease: "power3.ease"
+		x: -100,
+		duration: 1,
+		ease: "power2.ease"
 	})
 
 	gsap.fromTo(
@@ -120,7 +118,7 @@ document.addEventListener("DOMContentLoaded", event => {
 		{
 			scale: 1,
 			opacity: 1,
-			x: 0,
+			x: -10,
 			ease: "none",
 			scrollTrigger: {
 				trigger: luxury,
@@ -131,19 +129,142 @@ document.addEventListener("DOMContentLoaded", event => {
 		}
 	)
 
-	gsap.to(luxuryPlane, {
-		x: -300,
-		scale: 1.2,
-		ease: "none",
-		scrollTrigger: {
-			trigger: luxuryPlane,
-			start: "top 65%",
-			end: "+=120%",
-			scrub: true,
-			immediateRender: false
-		}
+	gsap.from(luxuryPlane, {
+		scale: 0.9,
+		opacity: 0,
+		x: 150,
+		duration: 1.5,
+		ease: "power3.ease"
 	})
 
+	// Самолёт luxury
+	gsap.fromTo(
+		luxuryPlane,
+		{
+			scale: 0.9,
+			opacity: 0,
+			x: 150
+		},
+		{
+			x: -300,
+			scale: 1.2,
+			ease: "none",
+			scrollTrigger: {
+				trigger: luxuryPlane,
+				start: "top 65%", // свой старт
+				end: "+=120%",
+				scrub: true,
+				immediateRender: false
+			}
+		}
+	)
+
+	/* Loyalty */
+	const loyalty = ".loyalty"
+	const loyaltyPlane = ".loyalty__image"
+
+	gsap.from(`${loyalty} .loyalty__top`, {
+		scale: 0.9,
+		opacity: 0,
+		x: 100,
+		duration: 1,
+		ease: "power2.ease"
+	})
+
+	gsap.fromTo(
+		`${loyalty} .loyalty__top`,
+		{ scale: 0.9, opacity: 0, x: 100 },
+		{
+			scale: 1,
+			opacity: 1,
+			x: 10,
+			ease: "none",
+			scrollTrigger: {
+				trigger: loyalty,
+				start: "top 80%",
+				end: "+=80%",
+				scrub: true
+			}
+		}
+	)
+
+	gsap.from(`${loyalty} .loyalty__bottom`, {
+		scale: 0.9,
+		opacity: 0,
+		x: -100,
+		duration: 1,
+		ease: "power2.ease"
+	})
+
+	gsap.fromTo(
+		`${loyalty} .loyalty__bottom`,
+		{ scale: 0.9, opacity: 0, x: -100 },
+		{
+			scale: 1,
+			opacity: 1,
+			x: -10,
+			ease: "power2.out",
+			scrollTrigger: {
+				trigger: `${loyalty} .loyalty__bottom`,
+				start: "top 82%",
+				end: "top 22%",
+				scrub: true
+			}
+		}
+	)
+
+	// Самолёт loyalty
+
+	gsap.from(loyaltyPlane, {
+		scale: 0.9,
+		opacity: 0,
+		x: -100,
+		duration: 1.5,
+		ease: "power3.ease"
+	})
+
+	gsap.fromTo(
+		loyaltyPlane,
+		{
+			scale: 0.9,
+			opacity: 0,
+			x: -100
+		},
+		{
+			x: 200,
+			scale: 1.2,
+			ease: "none",
+			scrollTrigger: {
+				trigger: loyaltyPlane,
+				start: "top 65%", // свой старт
+				end: "+=120%",
+				scrub: true,
+				immediateRender: false
+			}
+		}
+	)
+
+	gsap.set(
+		[
+			fadeIn,
+			rightFadeIn,
+			zoomInFadeIn,
+			welcome,
+			welcome__plane,
+			`${luxury} > .container`,
+			luxuryPlane,
+			`${loyalty} .loyalty__top`,
+			`${loyalty} .loyalty__bottom`,
+			loyaltyPlane
+		],
+		{
+			force3D: true,
+			transformPerspective: 1000,
+			backfaceVisibility: "hidden"
+		}
+	)
+
+	// Ensure that the ScrollTrigger is refreshed after the content is loaded
 	window.addEventListener("load", () => {
 		ScrollTrigger.refresh()
 	})

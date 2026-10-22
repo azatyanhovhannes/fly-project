@@ -6,6 +6,7 @@
 		.loyalty__top {
 			margin-left: auto;
 			max-width: max-content;
+			will-change: transform;
 		}
 		.loyalty__image {
 			position: absolute;
@@ -13,9 +14,11 @@
 			top: 15rem;
 			max-width: 130%;
 			height: auto;
+			will-change: transform;
 		}
 		.loyalty__bottom {
 			margin-top: 30rem;
+			will-change: transform;
 		}
 	}
 }
